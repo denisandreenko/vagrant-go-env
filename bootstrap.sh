@@ -40,5 +40,5 @@ if [ ! -f "$GO_TAR_PATH" ]; then
     wget -P /usr/local https://golang.org/dl/$GODIST
     rm -rf /usr/local/go && tar -C /usr/local -xzf $GO_TAR_PATH
 fi
-export PATH=$PATH:/usr/local/go/bin
-
+echo "export PATH=$PATH:/usr/local/go/bin">>~/.bashrc
+# TODO: add GOPATH
